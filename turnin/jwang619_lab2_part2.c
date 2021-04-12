@@ -15,7 +15,7 @@
 int main(void) {
     /* Insert DDR and PORT initializations */
 	DDRA = 0x00; PORTA = 0xFF;
-	DDRB = 0xFF; PORTB = 0x00;
+	DDRC = 0xFF; PORTC = 0x00;
     /* Insert your solution below */
     	unsigned char tmpPA0 = 0x00;
 	unsigned char tmpPA1 = 0x00;
@@ -42,7 +42,7 @@ int main(void) {
 		if(tmpPA3 == 0x08) {
 			++cntAvail;
 		}	
-		PORTB = cntAvail;
+		PORTC = cntAvail;
 	 }
     return 0;
 }
