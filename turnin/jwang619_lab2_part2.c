@@ -22,25 +22,25 @@ int main(void) {
         unsigned char tmpPA2 = 0x00;
 	unsigned char tmpPA3 = 0x00;
 
-	unsigned char cntAvail = 0x00;
+	unsigned char cntAvail = 0x04;
 	while (1) {
-		cntAvail = 0x00;
+		cntAvail = 0x04;
 		tmpPA0 = PINA & 0x01;
 		tmpPA1 = PINA & 0x02;
 		tmpPA2 = PINA & 0x04;
 		tmpPA3 = PINA & 0x08;
 
 		if(tmpPA0 == 0x01) {
-			++cntAvail;
+			--cntAvail;
 		}
 		if(tmpPA1 == 0x02) {
-			++cntAvail;
+			--cntAvail;
 		}
 		if(tmpPA2 == 0x04) {
-			++cntAvail;
+			--cntAvail;
 		}
 		if(tmpPA3 == 0x08) {
-			++cntAvail;
+			--cntAvail;
 		}	
 		PORTC = cntAvail;
 	 }

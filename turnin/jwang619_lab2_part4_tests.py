@@ -27,20 +27,22 @@
 #    },
 #    ]
 
-tests = [ {'description': 'PINA: 0x28, PINB: 0x28, PINC: 0x28 => PORTD: 0x78',
-    'steps': [ {'inputs': [('PINA',0x28), ('PINB', 0x28), ('PINC', 0x28)], 'iterations': 5 } ],
-    'expected': [('PORTD',0x78)],
+tests = [ {'description': 'PINA: 0x40, PINB: 0x40, PINC: 0x40 => PORTD: 0x31',
+    'steps': [ {'inputs': [('PINA',0x40), ('PINB', 0x40), ('PINC', 0x40)], 'iterations': 5 } ],
+    'expected': [('PORTD',0x31)],
     },
-    {'description': 'PINA: 0x32, PINB: 0x32, PINC: 0x32 => PORTD: 0x95',
-    'steps': [ {'inputs': [('PINA',0x32), ('PINB', 0x32), ('PINC', 0x32)], 'iterations': 5 } ],
-    'expected': [('PORTD',0x95)],
+    {'description': 'PINA: 0x00, PINB: 0x23, PINC: 0x55 => PORTD: 0x1E',
+    'steps': [ {'inputs': [('PINA',0x00), ('PINB', 0x23), ('PINC', 0x55)], 'iterations': 5 } ],
+    'expected': [('PORTD',0x1E)],
     },
-    {'description': 'PINA: 0x0A, PINB: 0x32, PINC: 0x64 => PORTD: 0xA3',
-    'steps': [ {'inputs': [('PINA',0x0A), ('PINB', 0x32), ('PINC', 0x64)], 'iterations': 5 } ],
-    'expected': [('PORTD',0xA3)],
+    {'description': 'PINA: 0x00, PINB: 0x37, PINC: 0x55 => PORTD: 0x22',
+    'steps': [ {'inputs': [('PINA',0x00), ('PINB', 0x37), ('PINC', 0x55)], 'iterations': 5 } ],
+    'expected': [('PORTD',0x22)],
     },
 
     ]
+
+
 #watch = ['PORTB']
 
 
